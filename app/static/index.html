@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Ticket Desk</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header class="topbar">
+  <h1>AI Ticket Desk</h1>
+  <nav>
+    <button class="tab active" data-view="tickets">Tickets</button>
+    <button class="tab" data-view="fields">Custom fields</button>
+  </nav>
+  <div id="system-status" class="status-pills" title="Local AI components"></div>
+</header>
+
+<main>
+  <!-- Tickets view -->
+  <section id="view-tickets" class="view">
+    <aside class="list-pane">
+      <div class="list-toolbar">
+        <button id="btn-new" class="primary">+ New ticket</button>
+        <input id="filter-q" type="search" placeholder="Search tickets">
+        <div class="filters">
+          <select id="filter-status"><option value="">All statuses</option><option>Open</option><option>In Progress</option><option>Resolved</option><option>Closed</option></select>
+          <select id="filter-priority"><option value="">All priorities</option><option>Low</option><option>Medium</option><option>High</option><option>Urgent</option></select>
+          <label class="inline"><input id="filter-inactive" type="checkbox"> Show deleted</label>
+        </div>
+      </div>
+      <ul id="ticket-list" class="ticket-list"></ul>
+    </aside>
+
+    <section class="detail-pane" id="detail-pane">
+      <div class="empty">Select a ticket or create a new one.</div>
+    </section>
+  </section>
+
+  <!-- Custom fields view -->
+  <section id="view-fields" class="view hidden">
+    <div class="card">
+      <h2>Custom fields</h2>
+      <p class="muted">These fields are loaded dynamically into the ticket form. Adding one needs no code or database change.</p>
+      <table class="fields-table">
+        <thead><tr><th>Label</th><th>Key</th><th>Type</th><th>Required</th><th>Options</th><th>Active</th><th></th></tr></thead>
+        <tbody id="fields-body"></tbody>
+      </table>
+    </div>
+    <div class="card">
+      <h3>Add a field</h3>
+      <form id="field-form" class="grid-form">
+        <label>Label<input name="label" required placeholder="Warranty ID"></label>
+        <label>Key<input name="name" required pattern="[a-z][a-z0-9_]*" placeholder="warranty_id"></label>
+        <label>Type
+          <select name="field_type">
+            <option value="text">Text</option><option value="dropdown">Dropdown</option><option value="number">Number</option>
+            <option value="date">Date</option><option value="checkbox">Checkbox</option>
+          </select>
+        </label>
+        <label>Options (dropdown, comma separated)<input name="options" placeholder="Gold, Silver, Bronze"></label>
+        <label>Help text<input name="help_text"></label>
+        <label class="inline"><input type="checkbox" name="required"> Required</label>
+        <div class="form-actions"><button class="primary" type="submit">Add field</button></div>
+        <div class="form-error" id="field-form-error"></div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<div id="toast" class="toast hidden"></div>
+<script src="/static/app.js"></script>
+</body>
+</html>

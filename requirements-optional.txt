@@ -1,0 +1,4 @@
+# Better semantic retrieval with a small local neural embedding model
+# (all-MiniLM-L6-v2, ~90 MB, downloaded once from Hugging Face, then runs offline on CPU).
+# Without it the app uses TF-IDF retrieval automatically.
+sentence-transformers>=3.0

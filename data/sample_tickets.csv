@@ -1,0 +1,98 @@
+subject,description,category,priority,solution
+Unable to log in,I forgot my password and cannot access my account.,Account,High,Reset the password using the account recovery process.
+Forgot password,I can't remember my password. How do I get back into my account?,Account,Medium,Reset the password using the account recovery process.
+Password not working,My old password is not accepted anymore and I need to sign in today.,Account,High,Reset the password using the account recovery process.
+Can't sign in,Every time I enter my password it says incorrect credentials. I think I forgot it.,Account,Medium,Reset the password using the account recovery process.
+Need a new password,Please help me change my password because I lost it.,Account,Low,Reset the password using the account recovery process.
+Login help,I don't remember the password I set when I registered.,Account,Medium,Reset the password using the account recovery process.
+Lost access to account,I changed my password last week and now I cannot recall it.,Account,High,Reset the password using the account recovery process.
+Password reset request,Can you reset my password? I am locked out because I forgot it.,Account,Medium,Reset the password using the account recovery process.
+Account locked,My account says it is locked after too many login attempts.,Account,High,Wait 30 minutes for the temporary lock to expire or verify your identity to unlock the account.
+Too many attempts,I typed the wrong password several times and now the account is blocked.,Account,High,Wait 30 minutes for the temporary lock to expire or verify your identity to unlock the account.
+Account blocked,The website says my account has been temporarily locked for security reasons.,Account,Medium,Wait 30 minutes for the temporary lock to expire or verify your identity to unlock the account.
+Locked out of account,I got a message that my account is locked and I can't do anything.,Account,High,Wait 30 minutes for the temporary lock to expire or verify your identity to unlock the account.
+Security lock on account,After failed sign in attempts my profile got locked. Please unlock it.,Account,Medium,Wait 30 minutes for the temporary lock to expire or verify your identity to unlock the account.
+Account suspended after login attempts,My account is showing a temporary lock notice. How long does it last?,Account,Medium,Wait 30 minutes for the temporary lock to expire or verify your identity to unlock the account.
+Two-factor code not received,I am not getting the verification code on my phone when I log in.,Account,High,Use a backup code or reset two-factor authentication after identity verification.
+Lost phone with authenticator,I lost my phone and the authenticator app so I can't complete 2FA.,Account,High,Use a backup code or reset two-factor authentication after identity verification.
+2FA problem,My two step verification code keeps saying invalid.,Account,Medium,Use a backup code or reset two-factor authentication after identity verification.
+New phone 2FA,I switched to a new phone and my authenticator codes are gone.,Account,Medium,Use a backup code or reset two-factor authentication after identity verification.
+SMS verification not arriving,The one time passcode text message never arrives so I cannot log in.,Account,High,Use a backup code or reset two-factor authentication after identity verification.
+Authentication code issue,I can't pass two-factor authentication because the codes don't work.,Account,Medium,Use a backup code or reset two-factor authentication after identity verification.
+Change email address,I want to update the email address on my account to a new one.,Account,Low,Update the email address in Account Settings and confirm it using the verification link.
+Update my email,My old work email no longer exists. How do I change my account email?,Account,Medium,Update the email address in Account Settings and confirm it using the verification link.
+Wrong email on profile,I registered with a typo in my email address. Please correct it.,Account,Low,Update the email address in Account Settings and confirm it using the verification link.
+New email for account,I'd like my account notifications to go to my personal email instead.,Account,Low,Update the email address in Account Settings and confirm it using the verification link.
+Edit contact email,How can I modify the email linked to my profile?,Account,Low,Update the email address in Account Settings and confirm it using the verification link.
+Refund request,I want a refund for my recent order because I no longer need it.,Billing,Medium,Submit a refund request from the Orders page within the 30-day refund window.
+Money back please,The product did not meet my expectations and I would like my money back.,Billing,Medium,Submit a refund request from the Orders page within the 30-day refund window.
+Requesting refund,I bought this two weeks ago and want to get refunded.,Billing,Medium,Submit a refund request from the Orders page within the 30-day refund window.
+How to get a refund,What is the process to get a refund on my purchase?,Billing,Low,Submit a refund request from the Orders page within the 30-day refund window.
+Refund for unused service,I paid for a plan I never used. Can I have a refund?,Billing,Medium,Submit a refund request from the Orders page within the 30-day refund window.
+Return money for order,Please refund the amount I paid for order last week.,Billing,Medium,Submit a refund request from the Orders page within the 30-day refund window.
+Charged twice,I was charged two times for the same order on my credit card.,Billing,High,Verify the duplicate charge and refund the extra payment to the original payment method.
+Duplicate payment,My bank statement shows a duplicate payment for one purchase.,Billing,High,Verify the duplicate charge and refund the extra payment to the original payment method.
+Double billing,I see two identical charges this month for my subscription.,Billing,High,Verify the duplicate charge and refund the extra payment to the original payment method.
+Billed twice for subscription,You billed me twice for the monthly plan. Please fix this.,Billing,High,Verify the duplicate charge and refund the extra payment to the original payment method.
+Extra charge on card,There is an extra charge with the same amount as my order.,Billing,Medium,Verify the duplicate charge and refund the extra payment to the original payment method.
+Payment declined,My card payment keeps getting declined at checkout.,Billing,High,Update the payment method details and retry the payment.
+Card not accepted,The checkout says my card was not accepted even though it is valid.,Billing,Medium,Update the payment method details and retry the payment.
+Payment failed,I tried to pay for my order but the payment failed.,Billing,High,Update the payment method details and retry the payment.
+Subscription payment failed,My subscription renewal failed because the card expired.,Billing,Medium,Update the payment method details and retry the payment.
+Transaction error,I get a transaction error when I try to complete the purchase.,Billing,Medium,Update the payment method details and retry the payment.
+Expired card,My card on file expired and the renewal did not go through.,Billing,Medium,Update the payment method details and retry the payment.
+Cancel subscription,I want to cancel my subscription and stop future payments.,Billing,Medium,Cancel the subscription from the Billing section of Account Settings.
+Stop auto renewal,How do I turn off automatic renewal for my plan?,Billing,Low,Cancel the subscription from the Billing section of Account Settings.
+End my membership,Please end my membership. I don't want to be charged next month.,Billing,Medium,Cancel the subscription from the Billing section of Account Settings.
+Unsubscribe from plan,I no longer use the service and want to unsubscribe from the paid plan.,Billing,Low,Cancel the subscription from the Billing section of Account Settings.
+Cancel premium plan,How can I cancel my premium plan before the next billing date?,Billing,Medium,Cancel the subscription from the Billing section of Account Settings.
+Need invoice,I need an invoice for my last purchase for my company records.,Billing,Low,Download the invoice from the Billing History page.
+Receipt request,Can you send me a receipt for my payment?,Billing,Low,Download the invoice from the Billing History page.
+Invoice for tax,Where can I get invoices for all payments this year for tax purposes?,Billing,Low,Download the invoice from the Billing History page.
+Missing invoice,I didn't get an invoice after paying for the annual plan.,Billing,Low,Download the invoice from the Billing History page.
+Billing statement,How do I download a billing statement for my order?,Billing,Low,Download the invoice from the Billing History page.
+Where is my order,My order hasn't arrived yet. Where is it?,Shipping,Medium,Track the order using the tracking link and allow the standard delivery window.
+Package delayed,My package is late and was supposed to arrive yesterday.,Shipping,Medium,Track the order using the tracking link and allow the standard delivery window.
+Delivery status,Can you tell me the delivery status of my shipment?,Shipping,Low,Track the order using the tracking link and allow the standard delivery window.
+Order not delivered,It has been a week and I have not received my order.,Shipping,High,Track the order using the tracking link and allow the standard delivery window.
+Shipping taking too long,Shipping is taking much longer than expected. When will my parcel come?,Shipping,Medium,Track the order using the tracking link and allow the standard delivery window.
+Tracking number,I need the tracking number for my parcel.,Shipping,Low,Track the order using the tracking link and allow the standard delivery window.
+Late delivery,My delivery is late. What is going on with my shipment?,Shipping,Medium,Track the order using the tracking link and allow the standard delivery window.
+Damaged item received,The item arrived broken and the box was crushed.,Returns,High,Send photos of the damage so a free replacement or full refund can be arranged.
+Product arrived damaged,My order came with a cracked screen.,Returns,High,Send photos of the damage so a free replacement or full refund can be arranged.
+Broken on arrival,The glass vase was shattered when I opened the package.,Returns,High,Send photos of the damage so a free replacement or full refund can be arranged.
+Defective product,The product I received is defective and does not turn on.,Returns,High,Send photos of the damage so a free replacement or full refund can be arranged.
+Item damaged in shipping,The item was damaged during shipping and has scratches and dents.,Returns,Medium,Send photos of the damage so a free replacement or full refund can be arranged.
+Wrong item received,I received a different product than what I ordered.,Returns,Medium,Start a return from the Orders page to get a prepaid return label.
+Want to return item,I would like to return the shoes because they don't fit.,Returns,Low,Start a return from the Orders page to get a prepaid return label.
+Return an order,How do I send back an item I bought last week?,Returns,Low,Start a return from the Orders page to get a prepaid return label.
+Exchange size,The shirt is too small. Can I return it for a different size?,Returns,Low,Start a return from the Orders page to get a prepaid return label.
+Incorrect product shipped,You sent me the wrong color. I want to return it.,Returns,Medium,Start a return from the Orders page to get a prepaid return label.
+Return label,I need a return label to send my order back.,Returns,Low,Start a return from the Orders page to get a prepaid return label.
+Change shipping address,I entered the wrong delivery address for my order.,Shipping,High,Update the shipping address from the Orders page before the order is shipped.
+Update delivery address,I moved and need my order delivered to a new address.,Shipping,Medium,Update the shipping address from the Orders page before the order is shipped.
+Wrong address on order,The address on my order is incorrect. Can you change it?,Shipping,High,Update the shipping address from the Orders page before the order is shipped.
+Edit address after ordering,Is it possible to edit the address after I placed the order?,Shipping,Medium,Update the shipping address from the Orders page before the order is shipped.
+Ship to different address,Please ship my order to my office address instead of home.,Shipping,Medium,Update the shipping address from the Orders page before the order is shipped.
+App keeps crashing,The mobile app crashes every time I open it.,Technical,High,Update the app to the latest version and clear the app cache.
+App closes unexpectedly,The app closes by itself when I go to the checkout screen.,Technical,High,Update the app to the latest version and clear the app cache.
+App freezing,My phone app freezes and stops responding after the latest update.,Technical,Medium,Update the app to the latest version and clear the app cache.
+Mobile app not opening,The Android app shows a white screen and won't open.,Technical,High,Update the app to the latest version and clear the app cache.
+iOS app crash,The iPhone app crashes when I try to upload a photo.,Technical,Medium,Update the app to the latest version and clear the app cache.
+Website not loading,The website is not loading properly in my browser.,Technical,Medium,Clear the browser cache and cookies and use a supported browser.
+Page is blank,When I open the dashboard the page is blank.,Technical,Medium,Clear the browser cache and cookies and use a supported browser.
+Site very slow,The site is extremely slow and buttons do not respond.,Technical,Low,Clear the browser cache and cookies and use a supported browser.
+Website display broken,The web page layout looks broken and images are missing.,Technical,Low,Clear the browser cache and cookies and use a supported browser.
+Checkout button not working,The checkout button on the website does nothing when I click it.,Technical,High,Clear the browser cache and cookies and use a supported browser.
+Not receiving emails,I am not getting any order confirmation or notification emails.,Technical,Medium,Check the spam folder and add our email address to your safe senders list.
+No confirmation email,I placed an order but never got a confirmation email.,Technical,Low,Check the spam folder and add our email address to your safe senders list.
+Missing notification emails,Your emails stopped arriving in my inbox.,Technical,Low,Check the spam folder and add our email address to your safe senders list.
+Newsletter not arriving,I subscribed to updates but I receive nothing by email.,Technical,Low,Check the spam folder and add our email address to your safe senders list.
+Export my data,I want to download a copy of all my account data.,Technical,Low,Export your data from Settings under Data and Privacy.
+Download account data,How can I get an export of my order history and profile data?,Technical,Low,Export your data from Settings under Data and Privacy.
+Data copy request,Please provide me with a copy of the personal data you hold about me.,Technical,Medium,Export your data from Settings under Data and Privacy.
+Backup my information,Is there a way to export my saved information as a file?,Technical,Low,Export your data from Settings under Data and Privacy.
+Delete my account,I want to permanently delete my account.,Account,Medium,Submit an account deletion request from the Privacy settings page.
+Close account,Please close my account and remove my profile.,Account,Medium,Submit an account deletion request from the Privacy settings page.
+Remove my personal data,I want you to erase my account and all my personal information.,Account,Medium,Submit an account deletion request from the Privacy settings page.
+Deactivate profile,How do I deactivate and delete my profile for good?,Account,Low,Submit an account deletion request from the Privacy settings page.
