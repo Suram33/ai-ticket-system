@@ -26,14 +26,18 @@ class OllamaLLM:
     def status(self) -> dict:
         """Is the server up and is the configured model pulled?"""
         try:
-            r = requests.get(f"{self.base_url}/api/tags", timeout=3)
+            r = requests.get(f"{self.base_url}/api/tags", timeout=10)
             r.raise_for_status()
-            names = {m.get("name", "") for m in r.json().get("models", [])}
-            has_model = self.model in names or f"{self.model}:latest" in names
-            return {"reachable": True, "model_available": has_model,
-                    "detail": None if has_model else f"Run: ollama pull {self.model}"}
+            names = [m.get("name", "") for m in r.json().get("models", [])]
         except Exception as exc:
-            return {"reachable": False, "model_available": False, "detail": f"Ollama not reachable at {self.base_url} ({exc.__class__.__name__})"}
+            return {"reachable": False, "model_available": False,
+                    "detail": f"Ollama not reachable at {self.base_url} ({exc.__class__.__name__}). Start the Ollama app or run: ollama serve"}
+        wanted = self.model if ":" in self.model else f"{self.model}:latest"
+        if wanted in names:
+            return {"reachable": True, "model_available": True, "detail": None}
+        found = ", ".join(names) or "none"
+        return {"reachable": True, "model_available": False,
+                "detail": f"Model '{self.model}' is not pulled. Run: ollama pull {self.model} (models found: {found})"}
 
     def generate(self, system: str, prompt: str) -> str:
         try:

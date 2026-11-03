@@ -127,7 +127,7 @@ All settings are environment variables with sensible defaults (see `.env.example
 | Variable | Default | Meaning |
 |---|---|---|
 | `DATABASE_PATH` | `./tickets.db` | SQLite file, created automatically |
-| `OLLAMA_URL` | `http://localhost:11434` | Local Ollama server |
+| `OLLAMA_URL` | `http://127.0.0.1:11434` | Local Ollama server (127.0.0.1 avoids a slow IPv6 lookup of "localhost" on Windows) |
 | `OLLAMA_MODEL` | `llama3.2:3b` | Any model you pulled with `ollama pull` |
 | `LLM_ENABLED` | `true` | `false` forces template mode |
 | `LLM_TIMEOUT_SECONDS` | `120` | After this the template fallback is used |
@@ -360,3 +360,11 @@ schema.sql              Database schema
 - SQLite fits a single server; use PostgreSQL for multiple instances.
 
 No secrets, API keys, credentials or real customer data are included in this repository.
+
+## Troubleshooting
+
+| Symptom | Fix |
+|---|---|
+| Badge says "LLM offline" but Ollama is installed | Make sure the Ollama app is running (`ollama list` should answer). On Windows, use `http://127.0.0.1:11434` rather than `localhost` (the default since v1.1). Hover over the badge to see the exact reason. |
+| Badge says "LLM model not found" | Run `ollama list` and either `ollama pull llama3.2:3b` or set `OLLAMA_MODEL` to a name from that list (Windows: `set OLLAMA_MODEL=llama3.2:latest` before starting the app). |
+| Log says "Embedding backend ollama unavailable ... not pulled" | Harmless. Retrieval falls back to TF-IDF. For better search, run `ollama pull nomic-embed-text` or `pip install -r requirements-optional.txt`. |

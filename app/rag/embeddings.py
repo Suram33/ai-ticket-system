@@ -76,6 +76,8 @@ class OllamaEmbedder:
 
     def embed(self, texts: list[str]) -> np.ndarray:
         r = requests.post(self.url, json={"model": self.model, "input": texts}, timeout=self.timeout)
+        if r.status_code == 404:
+            raise RuntimeError(f"embedding model '{self.model}' not pulled (optional: ollama pull {self.model})")
         r.raise_for_status()
         return _normalize(np.asarray(r.json()["embeddings"], dtype=float))
 

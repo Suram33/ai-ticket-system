@@ -38,6 +38,7 @@ async function loadStatus() {
     let llm;
     if (!h.llm.enabled) llm = `<span class="pill warn">LLM disabled, template mode</span>`;
     else if (h.llm.reachable && h.llm.model_available) llm = `<span class="pill ok">LLM ${esc(h.llm.model)}</span>`;
+    else if (h.llm.reachable) llm = `<span class="pill warn" title="${esc(h.llm.detail)}">LLM model not found, template fallback</span>`;
     else llm = `<span class="pill warn" title="${esc(h.llm.detail)}">LLM offline, template fallback</span>`;
     const rag = `<span class="pill ok" title="${esc(h.rag.documents.join(", "))}">KB: ${h.rag.chunks} chunks, ${esc(h.rag.embedding_backend)}</span>`;
     $("#system-status").innerHTML = ml + llm + rag;

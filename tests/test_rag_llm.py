@@ -151,3 +151,22 @@ def test_ollama_client_missing_model_error(monkeypatch):
     monkeypatch.setattr(llm_mod.requests, "post", lambda *a, **k: Resp())
     with pytest.raises(llm_mod.LLMError, match="ollama pull"):
         llm_mod.OllamaLLM("http://localhost:11434", "llama3.2:3b").generate("s", "p")
+
+
+def test_ollama_status_reports_missing_model(monkeypatch):
+    import app.rag.llm as llm_mod
+
+    class Resp:
+        def raise_for_status(self):
+            pass
+
+        def json(self):
+            return {"models": [{"name": "llama3.2:latest"}, {"name": "qwen2.5:1.5b"}]}
+
+    monkeypatch.setattr(llm_mod.requests, "get", lambda *a, **k: Resp())
+    ok = llm_mod.OllamaLLM("http://127.0.0.1:11434", "qwen2.5:1.5b").status()
+    assert ok == {"reachable": True, "model_available": True, "detail": None}
+    assert llm_mod.OllamaLLM("http://127.0.0.1:11434", "llama3.2").status()["model_available"] is True
+    missing = llm_mod.OllamaLLM("http://127.0.0.1:11434", "llama3.2:3b").status()
+    assert missing["reachable"] is True and missing["model_available"] is False
+    assert "llama3.2:latest" in missing["detail"]
